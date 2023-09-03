@@ -31,7 +31,7 @@ output_directory = script_dir
 
 # server_prefix, used in generating the URLs for the
 # custom RSS feed; the web address to access output_dir
-server_prefix = "https://revival.ezri.org/~wade/rss/"
+server_prefix = "https://revival.ezri.org/podcasts"
 
 
 with open(subscriptions_file, "r") as f:
@@ -111,5 +111,5 @@ with open(subscriptions_file, "r") as f:
 
         # save new RSS feed
         ElementTree(rss).write(
-            os.path.join(output_directory, f"{feed_name}_rss.xml")
+            os.path.join(output_directory, f"rss_{feed_name}.xml")
         )
